@@ -1,0 +1,23 @@
+//Q1
+event loop is mechanism that allows Node.js to handle 
+asynchronous operations without blocking the main thread
+//Q2
+libuv is a C++ library that Node.js uses to handle asynchronous and non-blocking operations
+run 4 threads at a time depends on device setting
+//Q3
+Node.js doesn't wait for slow asynchronous operations
+ It delegates them and continues executing other JavaScript code
+ When the operation finishes, the Event Loop coordinates execution of the callback when the Call Stack is available
+ //Q4
+ Call Stack executes js
+  Event Queue waits callback
+  Event Loop coordinates, montor callback
+  //Q5
+  Thread Pool is a group of threads managed by libuv that Node.js 
+  uses to handle certain asynchronous operations in the background
+  default size=4threads
+  //Q6
+  Blocking code stops the execution of other code until the current operation finishes
+  Node.js must wait until the file is completely read before moving
+  Non-blocking code allows Node.js to continue executing other code while an operation is being completed
+  Node.js starts reading the file and doesn't wait
